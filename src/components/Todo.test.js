@@ -23,14 +23,16 @@ describe('Tests for Todo component', () => {
         const btnNode = await waitForElement(
             () => getByTestId('form-btn')
         )
-        
+
         // clicar no botão
         fireEvent.click(btnNode)
 
-         // verificar se a tarefa foi adicionada na tabela
-        const tdNode =await waitForElement(
+        // verificar se a tarefa foi adicionada na tabela
+        const tdNode = await waitForElement(
             () => getByText(newTask)
         )
-       expect(tdNode).toBeDefined()
+
+        expect(tdNode).toBeDefined()
+        
     })
 })

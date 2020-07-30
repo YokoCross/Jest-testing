@@ -11,7 +11,7 @@ const Todo = () => {
         event.preventDefault()
 
         if (task.trim()) {
-           // updateTasks([...tasks, task])
+            updateTasks([...tasks, task])
             updateTask('')
         }
     }
@@ -26,9 +26,9 @@ const Todo = () => {
                     type='text'
                     value={task}
                 />
-                <button 
-                type='submit'
-                data-testid='form-btn'
+                <button
+                    type='submit'
+                    data-testid='form-btn'
                 >Add new task</button>
             </form>
             <table data-testid='form-table'>
